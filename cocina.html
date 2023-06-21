@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM - IndexedDB</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sweed-weed">
+        <div class="logo-menu" id="menu-hamb">
+            <!-- <img src="./img/menu.png" alt="menu cannabis medicinal"> -->
+            <span class="x-arriba"></span>
+            <span class="x-medio"></span>
+            <span class="x-abajo"></span>
+        </div>
+        <div class="navegacion">
+            <div class="max-container">  
+                <div class="navegacion__titulo">
+                    <img src="./img/sweetweed.jpg" alt="Logo" onclick="window.location.href='index.html';">
+                    <h1 style="position: absolute; top: -2000px; left: -2000px;">Sweet Weed - Cannabis Medicinal </h1>
+                </div>
+                <div class="navegacion__enlaces">
+                    <a href="#">PRODUCTOS</a>
+                    <a href="#">BLOG</a>
+                    <a href="#">PREGUNTAS</a>
+                    <a href="#">CONTACTO</a>
+                </div>
+               
+            </div>
+        </div>
+        <div class="navegacion__menu" id="contenido-menu">
+          
+            <a href="#">PRODUCTOS</a>
+            <hr>
+            <a href="#">BLOG</a>
+            <hr>
+            <a href="#">PREGUNTAS</a>
+            <hr>
+            <a href="#">CONTACTO</a>
+            <hr>
+        
+        </div>
+        <div class="navegacion__fondo-menu" id="fondo-menu"></div>
+    
+        <div class="contenido">
+            <div class="max-container">
+                <div class="bloque">
+                    <div class="bloque__contenido-img etiqueta-indice">
+                        <img class="art-uno" src="./img/cocina-cannabica.png" alt="fondo bloque">
+                    </div>
+                    
+                    <div class="indice">
+                        <a onclick="abrirContenioReceta('receta-aceite')">Aceite</a>
+                        <a onclick="abrirContenioReceta('receta-manteca')">Manteca</a>
+                        <a href="#" >Recetas</a>
+                    </div>
+                    <div href="#recetas" id="recetas"></div>
+
+                    <div class="contenedor-receta contenedor-receta--ocultar" id="receta-aceite">
+                        <h2>Aceite Cannabico</h2>
+                        <p style="margin-top: 0 !important; font-size: 1.7rem;">Cantidad: 450 g de aceite infusionado Ración: 1 cucharadito</p>
+                        <h3>Ingredientes</h3>
+                        <p class="contenedor-receta__ingredientes-txt">
+                            <span>1.</span> 6 tazas de aceite de cocina <br>(oliva, aguacate, cacahuete, coco, pepitas de uva, girasol, colza o una mezcla de estos) <br> <br>
+                            <span>2.</span> 19 g de cogollos de cannabis descarboxilados y molidos / 38 g de hojas de cannabis cortadas, secadas y molidas
+                         </p>
+
+                         <h3>Preparación</h3>
+                         <p class="contenedor-receta__ingredientes-txt">
+                           <span> 1.</span> En la parte superior de una olla para baño maría, mezcla el cannabis descarboxilado y el aceite. <br><br>
+                            <span>2.</span> No dejes que la parte inferior de este recipiente toque el agua. Cocina a fuego lento durante tres horas. Remueve cada treinta minutos aproximadamente. Escurre a través de varias capas de tela para hacer queso. A excepción del aceite de coco, el aceite infusionado se mantendra líquido por lo que no es necesario añadir agua. Si vas a utilizar aceite de coco, sigue las indicaciones de la receta para la preparación de la Mantequilla cannábica.
+                        </p>
+
+                        <p><br>
+                            Se puede usar cualquier tipo de aceite de cocina para preparar aceite cannábico o Ineliso.... mezcla de distintos aceites, La unica excepción es el aceite de coco que, como ocurro con lo mantequilla, es solido a temperatura ambiente, Para infusionar aceite de coco con cannabis sigue la receta de la Mantequilla cannabica. Para el resto de los aceites, puedes aplicar esta receta. Conviene trabajar con aceites que usas habitualmente en tu cocina, aunque algunas de las recetas de este libro requieren del uso de aceite de oliva, de aceite vegetal o de aceite de coco para su preparación. En estos casos, utiliza la version cannábica de estos aceites puesto que, de lo contrario, el sabor final del plato se vera afectado. Si no se especifica en la receta el rico de aceite a usar, cualquiera valera. suelo utilizar aceite de colza no transgénica, ya que no
+                            tiene ni olor ni sabor.
+                            Debe tenerse en cuenta que el aceite cannabico tendrá un tinte verdoso debido a su contenido en cannabis. Si lo almacenas en un lugar fresco y oscuro, el aceite cannóbico
+                            conserva hasta seis meses
+                        </p>
+                    </div>
+
+                    <div onclick="indiceTop();" class="indice-top ocultar-it" id="indice-top">
+                        <img src="./img/upload.png" alt="indice-top">
+                        <p>Indice</p>
+                    </div>
+
+                    <div class="contenedor-receta contenedor-receta--ocultar" id="receta-manteca">
+                        <h2>Mantequilla cannábica</h2>
+                        <p style="margin-top: 0 !important; font-size: 1.7rem;">Cantidad: 450 g | Ración: l cucharadita: 450 g de aceite infusionado Ración: 1 cucharadito</p>
+                        <h3>Ingredientes</h3>
+                        <ul class="contenedor-receta__ingredientes-txt">
+                            <li>450 g de mantequilla sin sal</li>
+                            <br> <br><li>Agua suficiente para llenar un olla con una altura de 5 cm</li>
+                            <br> <br><li>19 g de cogollos de cannabis molidos y descarbolixados / 38 g de hojas de cannabis cortadas, molidas, secadas y descarboxiladas </li>
+                        </ul>
+
+                         <h3>Preparación</h3>
+                         <p class="contenedor-receta__ingredientes-txt">
+                           <span> 1.</span>En una olla grande, calienta a fuego medio la mantequilla y el agua hasta que estén a punto de hervir sin llegar a hacerlo (el líquido mostrará actividad y pequeñas burbujas subiendo a la superficie). La mantequilla deberá haberse derretido por completo. <br><br>
+                            <span>2.</span> Añade el cannabis y bate. Baja el fuego y mantenlo así, evitando que la mezcla llegue a hervir (el líquido debe mostrar poca actividad y solo alguna burbuja de vez en cuando).  <br><br>
+                            <span>3.</span> Cocina durante tres horas, removiendo la mezcla cada media hora aproximadamente. Puedes añadir agua caliente si es necesario (no queremos que se evapore todo el agua).  <br><br>
+                            <span>4.</span> Mientras cocinas la mantequilla, prepara un escurridor cubriéndolo con una tela para hacer queso. Colócalo sobre un bol grande de cristal resistente al calor.  <br><br>
+                            <span>5.</span>  Pasadas tres horas, vierte la mantequilla despacio en el bol haciendo que toda la mezcla pase por la tela. Usando una espátula exprime el cannabis para extraer de él toda
+                            la mantequilla. Recoge la tela como si fuera una bolsa y pasa la espátula por ella para extraer cualquier resto de
+                            mantequilla cannábica haciéndola caer dentro del bol. Tira la tela. <br><br>
+                            <span>6.</span>  Cubre el bol con film transparente. Refrigera durante al menos tres horas, preferiblemente durante toda una noche. La mezcla se separará quedando por un lado la mantequilla sólida y por otro el agua. <br><br>
+                            <span>7.</span> Saca la mantequilla del refrigerador. Usa un cuchillo para separar la mantequilla del bol y elimina el agua.<br><br>
+                            <span>8.</span> Traslada la mantequilla a un recipiente de cristal con tapa. Almacena en el refrigerador o en el congelador.<br><br>
+                        </p>
+
+                        <p><br>
+                            Al preparar mantequilla infusionada con cannabis, la clave está en recordar nuestro lema: «suave y lento». Se debe infusionar la mantequilla a fuego lento durante horas, sin dejar que llegue a hervir. De esta forma activaremos el THC sin quemar la hierba. Cualquier mantequilla sin sal vale para prepararla, aunque una mantequilla de calidad proporciona un mejor sabor.
+                            Ten en cuenta que las mantequillas de calidad tienen menos agua, por lo que conseguirás una mayor cantidad final.
+                            La mantequilla resultante tendrá un color verde claro debido al cannabis. La mantequilla cannábica se conserva durante semanas en el frigorífico y hasta seis meses en el congelador.
+                            Suelo envasar la mantequilla in fusionada al vacío para una mejor conservación. No he notado que la potencia o el sabor de la mantequilla cannábica se deterioren si se almacena adecuadamente en el congelador.
+                        </p>
+                    </div>
+
+                    <div class="recetas">
+                        <div class="recetas__receta">
+                            <div class="recetas__foto"></div>
+                            <div class="recetas__texto"></div>
+                        </div>
+                        <div class="recetas__receta">
+                            <div class="recetas__foto"></div>
+                            <div class="recetas__texto"></div>
+                        </div>
+                        <div class="recetas__receta">
+                            <div class="recetas__foto"></div>
+                            <div class="recetas__texto"></div>
+                        </div>
+                        <div class="recetas__receta">
+                            <div class="recetas__foto"></div>
+                            <div class="recetas__texto"></div>
+                        </div>
+                        <div class="recetas__receta">
+                            <div class="recetas__foto"></div>
+                            <div class="recetas__texto"></div>
+                        </div>
+                        <div class="recetas__receta">
+                            <div class="recetas__foto"></div>
+                            <div class="recetas__texto"></div>
+                        </div>
+                        <div class="recetas__receta">
+                            <div class="recetas__foto"></div>
+                            <div class="recetas__texto"></div>
+                        </div>
+                        <div class="recetas__receta">
+                            <div class="recetas__foto"></div>
+                            <div class="recetas__texto"></div>
+                        </div>
+                        <div class="recetas__receta">
+                            <div class="recetas__foto"></div>
+                            <div class="recetas__texto"></div>
+                        </div>
+                        <div class="recetas__receta">
+                            <div class="recetas__foto"></div>
+                            <div class="recetas__texto"></div>
+                        </div>
+                        <div class="recetas__receta">
+                            <div class="recetas__foto"></div>
+                            <div class="recetas__texto"></div>
+                        </div>
+                        <div class="recetas__receta">
+                            <div class="recetas__foto"></div>
+                            <div class="recetas__texto"></div>
+                        </div>
+                        <div class="recetas__receta">
+                            <div class="recetas__foto"></div>
+                            <div class="recetas__texto"></div>
+                        </div>
+                        <div class="recetas__receta">
+                            <div class="recetas__foto"></div>
+                            <div class="recetas__texto"></div>
+                        </div>
+                        <div class="recetas__receta">
+                            <div class="recetas__foto"></div>
+                            <div class="recetas__texto"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="recomendacion">
+                    <div class="recomendacion__interesante">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+    
+        </div>
+    </div>
+    
+
+    <!-- <section id="feed-contenedor">
+        <div class="main-galery">
+
+             <div class="contenedor-galery">
+                <div class="galery">
+
+                </div>
+             </div>
+    
+        </div>
+    </section> -->
+
+    <script src="./js/index.js"></script>
+
+</body>
+</html>
